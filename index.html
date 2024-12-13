@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tracker</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Project Tracker</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to Project Tracker!</h2>
+        <section id="project-form">
+            <h3>Add a New Project</h3>
+            <form id="add-project-form" action="/add-project" method="POST">
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" name="name" required>
+
+                <label for="project-description">Description:</label>
+                <textarea id="project-description" name="description" required></textarea>
+
+                <label for="project-status">Status:</label>
+                <select id="project-status" name="status" required>
+                    <option value="Planning">Planning</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+                <button type="submit">Add Project</button>
+            </form>
+        </section>
+
+        <section id="project-list">
+            <h3>Projects</h3>
+            <ul>
+                <!-- Dynamically populated with JavaScript -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Project Tracker</p>
+    </footer>
+</body>
+</html>
